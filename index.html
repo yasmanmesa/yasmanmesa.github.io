@@ -1,5 +1,8 @@
 <html>
 	<head>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+		<script src="https://apps.elfsight.com/p/platform.js" defer></script>
+		
 		<style>
 		body {
 			font-family: 'Dancing Script', cursive;
@@ -60,6 +63,8 @@
 	</head>
 	<body>
 	
+		<div style="position: fixed; bottom: 0px; left: -1000px;" class="elfsight-app-efac972e-f2b8-4e08-b26e-8b3a93db5087"></div>
+		
 		<!-- DIALOG -->
 		<div id="dialog" class="flex-center" title="Dialog Title">
 			<div>
@@ -113,8 +118,23 @@
 		</div>
 		
 	</body>
+	
 	<script>
 	//JQuery
+	function handleShareButtons() {
+		var target = $('div.eapps-social-share-buttons-inner[eapps-link="inner"] > a[target]').not( "a.eapps-social-share-buttons-item" );
+		target.remove();
+		
+		var toolbar = $("div.eapps-widget-toolbar");
+		toolbar.remove();
+		
+		var share_button = $(".elfsight-app-efac972e-f2b8-4e08-b26e-8b3a93db5087");
+		share_button.animate({left: '0px'});
+	}
+	
+	$(document).ready(function(){
+		setTimeout(handleShareButtons, 5000);
+	});
 	
 	//JavaScript
 	var cardsCount = 4;

@@ -1,198 +1,482 @@
-<html>
+<html lang="cu">
 	<head>
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
-		<script src="https://apps.elfsight.com/p/platform.js" defer></script>
-		
-		<style>
-		body {
-			font-family: 'Dancing Script', cursive;
-			font-size: 5em;
-			text-shadow: 4px 4px 4px #aaa;
-		}
-		.flex-center {
-			align-items: center;
-			display: flex;
-			justify-content: center;
-		}
+
+        <title>Labios Rojos</title>
+
+        <meta property="og:image" content="https://yasmanmesa.github.io/images/site_image.png" />
+        <meta property="og:site_name" content="Labios Rojos" />
+        <meta property="og:type" content="object" />
+        <meta property="og:title" content="Labios Rojos" />
+        <meta property="og:url" content="https://yasmanmesa.github.io/index.html" />
+        <meta property="og:description" content="Productos de belleza para t&iacute;" />
+
+        <style>
+        body {
+            margin: 0;
+        }
 		.card {
-			width: 100%;
+			width: 80%;
+			height: 25%;
+			background-color: white;
+			margin-top: 12%;
+			margin-left: 10%;
+			border-radius: 5%;
 		}
-		.container {
-			width: 100%;
+		.card-content {
+			width: 50%;
 			height: 100%;
 		}
-		.text-container {
-			top:0%;
-			height: 40%;
-			text-align: center;
-		}
-		.foto {
-			width: 100%;
-			height: 60%;
-		}
-		.fl {
+		.card-text {
 			float: left;
 		}
-		.fr {
-			float: right;
+		.card-image {
+            float: right;
+            background-image: url("https://res.cloudinary.com/dlxc03mnj/image/upload/v1557853117/samples/ecommerce/shoes.png");
+            background-size: 100% auto;
+            background-repeat: no-repeat;
+            background-position: center;
+            border-radius: 5%;
 		}
-		.container#card_1 > .foto > div {
-			content: url("https://is2-ssl.mzstatic.com/image/thumb/Purple124/v4/03/57/33/0357334e-fb25-5b96-95be-b605b33b1b13/source/512x512bb.jpg");
-		}
-		.container#card_2 > .foto > div {
-			content: url("data:image/jpeg;base64,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");
-		}
-		.container > .foto > div {
-			height: 100%;
-		}
-		.container#card_3, .container#card_4 {
-			display: none;
-		}
-		#dialog {
-			display: none;
+		.cards-background {
+			background-image: url(./images/lips.png);
+			background-size: cover;
+			background-position: center;
 			position: fixed;
 			width: 100%;
 			height: 100%;
-			background-color: hotpink;
-			color: white;
-			text-shadow: none;
-			z-index: 1;
-			opacity: 0.9;
 		}
+		.footer {
+			height: 1px;
+			margin-top: 12%;
+		}
+		.top-card-text {
+			height: 50%;
+			margin-left: 22%;
+			font-size: 2.5em;
+			text-align: start;
+			align-items: baseline;
+		}
+		.bottom-card-text {
+			height: 50%;
+			margin-left: 20%;
+			font-size: 6em;
+			align-items: center;
+			display: flex;
+			text-align: start;
+		}
+		.card-volume {
+			font-size: 0.7em;
+			font-weight: bold;
+		}
+        .text-item-top {
+            height: 40%;
+        }
+		.text-item {
+			height: 20%;
+			display: flex;
+			align-items: center;
+		}
+        .card-description {
+            display: none;
+            text-align: left;
+            position: absolute;
+            bottom: 12%;
+            margin-right: 10%;
+            margin-left: 2%;
+            font-size: 2em;
+        }
+
+        /* Specific content */
+        .card-image-01 {
+            background-image: url("https://yasmanmesa.github.io/images/maquillaje_liquido.png");
+        }
+        .card-image-02 {
+            background-image: url("https://yasmanmesa.github.io/images/crayones_verde_morado.png");
+        }
+        .card-image-03 {
+            background-image: url("https://yasmanmesa.github.io/images/crayones_contorno.png");
+        }
+        .card-image-04 {
+            background-image: url("https://yasmanmesa.github.io/images/crayon_iluminador.png");
+        }
+        .card-image-05 {
+            background-image: url("https://yasmanmesa.github.io/images/labial_liquido.png");
+        }
+        .card-image-06 {
+            background-image: url("https://yasmanmesa.github.io/images/acabado_metalico.png");
+        }
+        .card-image-07 {
+            background-image: url("https://yasmanmesa.github.io/images/labial_rubor.png");
+        }
+        .card-image-08 {
+            background-image: url("https://yasmanmesa.github.io/images/trio_sombras.png");
+        }
+        .card-image-09 {
+            background-image: url("https://yasmanmesa.github.io/images/set_verano.png");
+        }
+        .card-image-10 {
+            background-image: url("https://yasmanmesa.github.io/images/sombras.png");
+        }
+        .card-image-11 {
+            background-image: url("https://yasmanmesa.github.io/images/looks.png");
+        }
+        .card-image-12 {
+            background-image: url("https://yasmanmesa.github.io/images/labial_mate.png");
+        }
+        .card-image-13 {
+            background-image: url("https://yasmanmesa.github.io/images/labial_gel.png");
+        }
+        .card-image-14 {
+            background-image: url("https://yasmanmesa.github.io/images/lapiz_delineador.png");
+        }
+        .card-image-15 {
+            background-image: url("https://yasmanmesa.github.io/images/brillo_labial.png");
+        }
+        .card-image-16 {
+            background-image: url("https://yasmanmesa.github.io/images/contorno_corrector_iluminador.png");
+        }
+        .card-image-17 {
+            background-image: url("https://yasmanmesa.github.io/images/set_bronchas_estuche.png");
+        }
 		</style>
 	</head>
 	<body>
-	
-		<div style="position: fixed; bottom: 0px; left: -1000px;" class="elfsight-app-ffb5d0c6-7ae9-42d4-8a51-7ed975f70a9f"></div>
-		
-		<!-- DIALOG -->
-		<div id="dialog" class="flex-center" title="Dialog Title">
-			<div>
-				<div style="width: 100%;">Comenta sobre el producto</div>
-				<div id="yes" style="width: 50%; text-align:center; font-size: 0.5em; float: left;">Si</div>
-				<div id="noup" style="width: 50%; text-align:center; font-size: 0.5em; float: right;">No</div>
+		<div class="cards-background"></div>
+
+		<div style="width: 100%; height: 100%; position: absolute;">
+
+			<div class="card">
+				<div class="card-content card-text">
+					<div class="top-card-text">
+                        <div class="text-item-top"></div>
+						<div class="text-item card-name">Maquillaje</div>
+						<div class="text-item card-name">l&iacute;quido</div>
+						<div class="text-item card-volume">mate</div>
+					</div>
+					<div class="bottom-card-text">
+						<div>12 cuc</div>
+					</div>
+				</div>
+
+				<div class="card-content card-image card-image-01">
+                    <div class="card-description"></div>
+                </div>
 			</div>
+
+            <div class="card">
+                <div class="card-content card-text">
+                    <div class="top-card-text">
+                        <div class="text-item-top"></div>
+                        <div class="text-item card-name">Cray&oacute;n corrector</div>
+                        <div class="text-item card-name">de color</div>
+                        <div class="text-item card-volume">verde o morado</div>
+                    </div>
+                    <div class="bottom-card-text">
+                        <div>10 cuc</div>
+                    </div>
+                </div>
+
+                <div class="card-content card-image card-image-02">
+                    <div class="card-description"></div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-content card-text">
+                    <div class="top-card-text">
+                        <div class="text-item-top"></div>
+                        <div class="text-item card-name">Cray&oacute;n para</div>
+                        <div class="text-item card-name">contorno de rostro</div>
+                        <div class="text-item card-volume">claro u oscuro</div>
+                    </div>
+                    <div class="bottom-card-text">
+                        <div>10 cuc</div>
+                    </div>
+                </div>
+
+                <div class="card-content card-image card-image-03">
+                    <div class="card-description"></div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-content card-text">
+                    <div class="top-card-text">
+                        <div class="text-item-top"></div>
+                        <div class="text-item card-name">Cray&oacute;n iluminador</div>
+                        <div class="text-item card-name">para rostro</div>
+                        <div class="text-item card-volume">rosado</div>
+                    </div>
+                    <div class="bottom-card-text">
+                        <div>10 cuc</div>
+                    </div>
+                </div>
+
+                <div class="card-content card-image card-image-04">
+                    <div class="card-description"></div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-content card-text">
+                    <div class="top-card-text">
+                        <div class="text-item-top"></div>
+                        <div class="text-item card-name">3 Creyones</div>
+                        <div class="text-item card-name">1 a 50%</div>
+                        <div class="text-item card-volume">promoci&oacute;n</div>
+                    </div>
+                    <div class="bottom-card-text">
+                        <div>25 cuc</div>
+                    </div>
+                </div>
+
+                <div class="card-content card-image card-image-16">
+                    <div class="card-description"></div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-content card-text">
+                    <div class="top-card-text">
+                        <div class="text-item-top"></div>
+                        <div class="text-item card-name">Labial</div>
+                        <div class="text-item card-name">l&iacute;quido</div>
+                        <div class="text-item card-volume">8 opciones</div>
+                    </div>
+                    <div class="bottom-card-text">
+                        <div>9.5 cuc</div>
+                    </div>
+                </div>
+
+                <div class="card-content card-image card-image-05">
+                    <div class="card-description"></div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-content card-text">
+                    <div class="top-card-text">
+                        <div class="text-item-top"></div>
+                        <div class="text-item card-name">Labial l&iacute;quido</div>
+                        <div class="text-item card-name">acabado met&aacute;lico</div>
+                        <div class="text-item card-volume">5 opciones</div>
+                    </div>
+                    <div class="bottom-card-text">
+                        <div>8 cuc</div>
+                    </div>
+                </div>
+
+                <div class="card-content card-image card-image-06">
+                    <div class="card-description"></div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-content card-text">
+                    <div class="top-card-text">
+                        <div class="text-item-top"></div>
+                        <div class="text-item card-name">Labial y rubor</div>
+                        <div class="text-item card-name">en barra</div>
+                        <div class="text-item card-volume">3 opciones</div>
+                    </div>
+                    <div class="bottom-card-text">
+                        <div>8 cuc</div>
+                    </div>
+                </div>
+
+                <div class="card-content card-image card-image-07">
+                    <div class="card-description"></div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-content card-text">
+                    <div class="top-card-text">
+                        <div class="text-item-top"></div>
+                        <div class="text-item card-name">Trio</div>
+                        <div class="text-item card-name">de sombras</div>
+                        <div class="text-item card-volume">7 opciones</div>
+                    </div>
+                    <div class="bottom-card-text">
+                        <div>10 cuc</div>
+                    </div>
+                </div>
+
+                <div class="card-content card-image card-image-08">
+                    <div class="card-description"></div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-content card-text">
+                    <div class="top-card-text">
+                        <div class="text-item-top"></div>
+                        <div class="text-item card-name">Set</div>
+                        <div class="text-item card-name">de verano</div>
+                        <div class="text-item card-volume">promoci&oacute;n</div>
+                    </div>
+                    <div class="bottom-card-text">
+                        <div>30 cuc</div>
+                    </div>
+                </div>
+
+                <div class="card-content card-image card-image-09">
+                    <div class="card-description"></div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-content card-text">
+                    <div class="top-card-text">
+                        <div class="text-item-top"></div>
+                        <div class="text-item card-name">Sombras</div>
+                        <div class="text-item card-name">para ojos</div>
+                        <div class="text-item card-volume">21 opciones</div>
+                    </div>
+                    <div class="bottom-card-text">
+                        <div>5 cuc</div>
+                    </div>
+                </div>
+
+                <div class="card-content card-image card-image-10">
+                    <div class="card-description"></div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-content card-text">
+                    <div class="top-card-text">
+                        <div class="text-item-top"></div>
+                        <div class="text-item card-name">Looks</div>
+                        <div class="text-item card-name">de Luis Casco</div>
+                        <div class="text-item card-volume">4 opciones</div>
+                    </div>
+                    <div class="bottom-card-text">
+                        <div>25 cuc</div>
+                    </div>
+                </div>
+
+                <div class="card-content card-image card-image-11">
+                    <div class="card-description"></div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-content card-text">
+                    <div class="top-card-text">
+                        <div class="text-item-top"></div>
+                        <div class="text-item card-name">Labial</div>
+                        <div class="text-item card-name">mate</div>
+                        <div class="text-item card-volume">4 opciones</div>
+                    </div>
+                    <div class="bottom-card-text">
+                        <div>13 cuc</div>
+                    </div>
+                </div>
+
+                <div class="card-content card-image card-image-12">
+                    <div class="card-description"></div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-content card-text">
+                    <div class="top-card-text">
+                        <div class="text-item-top"></div>
+                        <div class="text-item card-name">Labial semi-mate</div>
+                        <div class="text-item card-name">o semi-shane</div>
+                        <div class="text-item card-volume">21 opciones</div>
+                    </div>
+                    <div class="bottom-card-text">
+                        <div>12 cuc</div>
+                    </div>
+                </div>
+
+                <div class="card-content card-image card-image-13">
+                    <div class="card-description"></div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-content card-text">
+                    <div class="top-card-text">
+                        <div class="text-item-top"></div>
+                        <div class="text-item card-name">L&aacute;piz delineador</div>
+                        <div class="text-item card-name">para labios</div>
+                        <div class="text-item card-volume">5 opciones</div>
+                    </div>
+                    <div class="bottom-card-text">
+                        <div>10 cuc</div>
+                    </div>
+                </div>
+
+                <div class="card-content card-image card-image-14">
+                    <div class="card-description"></div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-content card-text">
+                    <div class="top-card-text">
+                        <div class="text-item-top"></div>
+                        <div class="text-item card-name">Brillo labial</div>
+                        <div class="text-item card-name">acabado Glossy</div>
+                        <div class="text-item card-volume">11 opciones</div>
+                    </div>
+                    <div class="bottom-card-text">
+                        <div>12 cuc</div>
+                    </div>
+                </div>
+
+                <div class="card-content card-image card-image-15">
+                    <div class="card-description"></div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-content card-text">
+                    <div class="top-card-text">
+                        <div class="text-item-top"></div>
+                        <div class="text-item card-name">Set de brochas</div>
+                        <div class="text-item card-name">con estuche</div>
+                        <div class="text-item card-volume">5 brochas y 1 estuche</div>
+                    </div>
+                    <div class="bottom-card-text">
+                        <div>56 cuc</div>
+                    </div>
+                </div>
+
+                <div class="card-content card-image card-image-17">
+                    <div class="card-description"></div>
+                </div>
+            </div>
+
+			<div class="footer"></div>
 		</div>
-		
-		<!-- CARD 1 -->
-		<div id="card_1" class="container">
-			<div class="foto flex-center">
-				<div></div>
-			</div>
-			<div class="text-container flex-center">
-				Salud y Belleza<br/>
-				Juntas de la mano<br/>
-			</div>
-		</div>
-		
-		<!-- CARD 2 -->
-		<div id="card_2" class="container">
-			<div class="foto flex-center">
-				<div></div>
-			</div>
-			<div class="text-container flex-center">
-				Hola soy Yanela<br/>
-				Este es mi cat&aacute;logo<br/>
-			</div>
-		</div>
-		
-		<!-- CARD 3 -->
-		<div id="card_3" class="container">
-			<div class="foto flex-center fl">
-				<img src="http://localhost/fotos_test/foto1.jpg" />			
-			</div>
-			<div class="text-container flex-center fr">
-				Perfume NoSeQue<br/>
-				La fragancia preferida por las chicas<br/>
-			</div>
-		</div>
-		
-		<!-- CARD 4 -->
-		<div id="card_4" class="container">
-			<div class="text-container flex-center fl">
-				Hola Yanela<br/>
-			</div>
-			<div class="foto flex-center fr">
-				<img src="http://localhost/fotos_test/foto1.jpg" />			
-			</div>
-		</div>
-		
+
 	</body>
-	
-	<script>
-	//JQuery
-	function handleShareButtons() {
-		var target = $('div.eapps-social-share-buttons-inner[eapps-link="inner"] > a[target]').not( "a.eapps-social-share-buttons-item" );
-		target.remove();
-		
-		var toolbar = $("div.eapps-widget-toolbar");
-		toolbar.remove();
-		
-		var share_button = $(".elfsight-app-ffb5d0c6-7ae9-42d4-8a51-7ed975f70a9f");
-		share_button.animate({left: '0px'});
-	}
-	
-	$(document).ready(function(){
-		setTimeout(handleShareButtons, 5000);
-	});
-	
-	//JavaScript
-	var cardsCount = 4;
-	var degradFactor = cardsCount * 2;
-	var sectionSize = document.body.scrollHeight / degradFactor;
-	
-	var dialog = document.getElementById("dialog");
-	var yes = document.getElementById("yes");
-	var noup = document.getElementById("noup");
-	
-	var card_1 = document.getElementById("card_1");
-	var card_2 = document.getElementById("card_2");
-	var card_3 = document.getElementById("card_3");
-	var card_4 = document.getElementById("card_4");
-	
-	var current_link = "";
-	
-	card_1_image_url = "http://visit.news/ujs4";
-	var linkUrl = "https://t.me/share/url?url=" + card_1_image_url + "&text=Yanela,%20me%20interesa%20este%20producto";
-	card_1.onclick = function(){
-		current_link = linkUrl;
-		dialog.style.display = 'flex';
-	};
-	
-	yes.onclick = function(){
-		window.location.href = current_link;
-	};
-	
-	noup.onclick = function(){
-		dialog.style.display = 'none';
-	};
-	
-	// Animation
-	window.onscroll = function(e) {
-		var scrollPosition = window.pageYOffset;
-		card1Degrad(scrollPosition);
-		card2Degrad(scrollPosition);
-	};
-	
-	function card1Degrad(pos) {
-	
-		var finalOpacity = parseInt(pos/sectionSize * 10);
-		
-		finalOpacity = finalOpacity / 10;
-		finalOpacity = (1-finalOpacity).toPrecision(1);
-		console.log(finalOpacity);
-		
-		if (finalOpacity >= 0) {
-			console.log(finalOpacity);
-			card_1.style.opacity = finalOpacity;
-		}
-	}
-	
-	function card2Degrad(pos) {
-		if (pos > (document.body.scrollHeight / 4) && pos < (document.body.scrollHeight / 4)*2){
-			console.log("yes yes");
-		}
-	}
-	
-	</script>
+
+    <script>
+
+        let cards = document.getElementsByClassName("card");
+        for (let i = 0; i < cards.length; i++) {
+            let card = cards[i];
+            card.onclick = function(){ expandOrReduce(this) };
+        }
+
+        function expandOrReduce(card) {
+
+            let card_text = card.getElementsByClassName("card-text")[0];
+            let card_image = card.getElementsByClassName("card-image")[0];
+            let card_description = card.getElementsByClassName("card-description")[0];
+
+            let isCardFullScreen = card_text.style.display === 'none';
+
+            card.style.height = isCardFullScreen ? '25%' : '84%';
+            card_text.style.display = isCardFullScreen ? 'block' : 'none';
+            card_image.style.width = isCardFullScreen ? '50%' : '100%';
+            card_description.style.display = isCardFullScreen ? 'none' : 'block';
+        }
+
+    </script>
 </html>

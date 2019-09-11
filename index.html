@@ -1,482 +1,53 @@
-<html lang="cu">
-	<head>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Web App Creator</title>
 
-        <title>Labios Rojos</title>
+    <script src="jquery-3.4.1.min.js"></script>
 
-        <meta property="og:image" content="http://yasmanmesa.github.io/images/site_image.png" />
-        <meta property="og:site_name" content="Labios Rojos" />
-        <meta property="og:type" content="object" />
-        <meta property="og:title" content="Labios Rojos" />
-        <meta property="og:url" content="https://yasmanmesa.github.io/index.html" />
-        <meta property="og:description" content="Productos de belleza para t&iacute;" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+</head>
+<body>
 
-        <style>
-        body {
-            margin: 0;
-        }
-		.card {
-			width: 80%;
-			height: 25%;
-			background-color: white;
-			margin-top: 12%;
-			margin-left: 10%;
-			border-radius: 5%;
-		}
-		.card-content {
-			width: 50%;
-			height: 100%;
-		}
-		.card-text {
-			float: left;
-		}
-		.card-image {
-            float: right;
-            background-image: url("https://res.cloudinary.com/dlxc03mnj/image/upload/v1557853117/samples/ecommerce/shoes.png");
-            background-size: 100% auto;
-            background-repeat: no-repeat;
-            background-position: center;
-            border-radius: 5%;
-		}
-		.cards-background {
-			background-image: url(./images/lips.png);
-			background-size: cover;
-			background-position: center;
-			position: fixed;
-			width: 100%;
-			height: 100%;
-		}
-		.footer {
-			height: 1px;
-			margin-top: 12%;
-		}
-		.top-card-text {
-			height: 50%;
-			margin-left: 22%;
-			font-size: 2.5em;
-			text-align: start;
-			align-items: baseline;
-		}
-		.bottom-card-text {
-			height: 50%;
-			margin-left: 20%;
-			font-size: 6em;
-			align-items: center;
-			display: flex;
-			text-align: start;
-		}
-		.card-volume {
-			font-size: 0.7em;
-			font-weight: bold;
-		}
-        .text-item-top {
-            height: 40%;
-        }
-		.text-item {
-			height: 20%;
-			display: flex;
-			align-items: center;
-		}
-        .card-description {
-            display: none;
-            text-align: left;
-            position: absolute;
-            bottom: 12%;
-            margin-right: 10%;
-            margin-left: 2%;
-            font-size: 2em;
-        }
+<div class="jumbotron text-center">
+    <h1>Web App Creator</h1>
+</div>
 
-        /* Specific content */
-        .card-image-01 {
-            background-image: url("https://yasmanmesa.github.io/images/maquillaje_liquido.png");
-        }
-        .card-image-02 {
-            background-image: url("https://yasmanmesa.github.io/images/crayones_verde_morado.png");
-        }
-        .card-image-03 {
-            background-image: url("https://yasmanmesa.github.io/images/crayones_contorno.png");
-        }
-        .card-image-04 {
-            background-image: url("https://yasmanmesa.github.io/images/crayon_iluminador.png");
-        }
-        .card-image-05 {
-            background-image: url("https://yasmanmesa.github.io/images/labial_liquido.png");
-        }
-        .card-image-06 {
-            background-image: url("https://yasmanmesa.github.io/images/acabado_metalico.png");
-        }
-        .card-image-07 {
-            background-image: url("https://yasmanmesa.github.io/images/labial_rubor.png");
-        }
-        .card-image-08 {
-            background-image: url("https://yasmanmesa.github.io/images/trio_sombras.png");
-        }
-        .card-image-09 {
-            background-image: url("https://yasmanmesa.github.io/images/set_verano.png");
-        }
-        .card-image-10 {
-            background-image: url("https://yasmanmesa.github.io/images/sombras.png");
-        }
-        .card-image-11 {
-            background-image: url("https://yasmanmesa.github.io/images/looks.png");
-        }
-        .card-image-12 {
-            background-image: url("https://yasmanmesa.github.io/images/labial_mate.png");
-        }
-        .card-image-13 {
-            background-image: url("https://yasmanmesa.github.io/images/labial_gel.png");
-        }
-        .card-image-14 {
-            background-image: url("https://yasmanmesa.github.io/images/lapiz_delineador.png");
-        }
-        .card-image-15 {
-            background-image: url("https://yasmanmesa.github.io/images/brillo_labial.png");
-        }
-        .card-image-16 {
-            background-image: url("https://yasmanmesa.github.io/images/contorno_corrector_iluminador.png");
-        }
-        .card-image-17 {
-            background-image: url("https://yasmanmesa.github.io/images/set_bronchas_estuche.png");
-        }
-		</style>
-	</head>
-	<body>
-		<div class="cards-background"></div>
+<div class="container">
+    <div class="row">
+        <div class="col-sm-6">
+            <h3>Dialog with title, message and view</h3>
+            <button id="sample-1" type="button" class="btn btn-primary">Sample 1</button>
+        </div>
+        <div class="col-sm-6">
+            <h3>Dialog with items</h3>
+            <button id="sample-2" type="button" class="btn btn-primary">Sample 2</button>
+        </div>
+    </div>
+</div>
 
-		<div style="width: 100%; height: 100%; position: absolute;">
+<!-- Firebase App (the core Firebase SDK) is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/5.10.1/firebase-app.js"></script>
 
-			<div class="card">
-				<div class="card-content card-text">
-					<div class="top-card-text">
-                        <div class="text-item-top"></div>
-						<div class="text-item card-name">Maquillaje</div>
-						<div class="text-item card-name">l&iacute;quido</div>
-						<div class="text-item card-volume">mate</div>
-					</div>
-					<div class="bottom-card-text">
-						<div>12 cuc</div>
-					</div>
-				</div>
+<!-- Add Firebase products that you want to use -->
+<script src="https://www.gstatic.com/firebasejs/5.10.1/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/5.10.1/firebase-database.js"></script>
 
-				<div class="card-content card-image card-image-01">
-                    <div class="card-description"></div>
-                </div>
-			</div>
+<script defer src="./init-firebase.js"></script>
 
-            <div class="card">
-                <div class="card-content card-text">
-                    <div class="top-card-text">
-                        <div class="text-item-top"></div>
-                        <div class="text-item card-name">Cray&oacute;n corrector</div>
-                        <div class="text-item card-name">de color</div>
-                        <div class="text-item card-volume">verde o morado</div>
-                    </div>
-                    <div class="bottom-card-text">
-                        <div>10 cuc</div>
-                    </div>
-                </div>
-
-                <div class="card-content card-image card-image-02">
-                    <div class="card-description"></div>
-                </div>
-            </div>
-
-            <div class="card">
-                <div class="card-content card-text">
-                    <div class="top-card-text">
-                        <div class="text-item-top"></div>
-                        <div class="text-item card-name">Cray&oacute;n para</div>
-                        <div class="text-item card-name">contorno de rostro</div>
-                        <div class="text-item card-volume">claro u oscuro</div>
-                    </div>
-                    <div class="bottom-card-text">
-                        <div>10 cuc</div>
-                    </div>
-                </div>
-
-                <div class="card-content card-image card-image-03">
-                    <div class="card-description"></div>
-                </div>
-            </div>
-
-            <div class="card">
-                <div class="card-content card-text">
-                    <div class="top-card-text">
-                        <div class="text-item-top"></div>
-                        <div class="text-item card-name">Cray&oacute;n iluminador</div>
-                        <div class="text-item card-name">para rostro</div>
-                        <div class="text-item card-volume">rosado</div>
-                    </div>
-                    <div class="bottom-card-text">
-                        <div>10 cuc</div>
-                    </div>
-                </div>
-
-                <div class="card-content card-image card-image-04">
-                    <div class="card-description"></div>
-                </div>
-            </div>
-
-            <div class="card">
-                <div class="card-content card-text">
-                    <div class="top-card-text">
-                        <div class="text-item-top"></div>
-                        <div class="text-item card-name">3 Creyones</div>
-                        <div class="text-item card-name">1 a 50%</div>
-                        <div class="text-item card-volume">promoci&oacute;n</div>
-                    </div>
-                    <div class="bottom-card-text">
-                        <div>25 cuc</div>
-                    </div>
-                </div>
-
-                <div class="card-content card-image card-image-16">
-                    <div class="card-description"></div>
-                </div>
-            </div>
-
-            <div class="card">
-                <div class="card-content card-text">
-                    <div class="top-card-text">
-                        <div class="text-item-top"></div>
-                        <div class="text-item card-name">Labial</div>
-                        <div class="text-item card-name">l&iacute;quido</div>
-                        <div class="text-item card-volume">8 opciones</div>
-                    </div>
-                    <div class="bottom-card-text">
-                        <div>9.5 cuc</div>
-                    </div>
-                </div>
-
-                <div class="card-content card-image card-image-05">
-                    <div class="card-description"></div>
-                </div>
-            </div>
-
-            <div class="card">
-                <div class="card-content card-text">
-                    <div class="top-card-text">
-                        <div class="text-item-top"></div>
-                        <div class="text-item card-name">Labial l&iacute;quido</div>
-                        <div class="text-item card-name">acabado met&aacute;lico</div>
-                        <div class="text-item card-volume">5 opciones</div>
-                    </div>
-                    <div class="bottom-card-text">
-                        <div>8 cuc</div>
-                    </div>
-                </div>
-
-                <div class="card-content card-image card-image-06">
-                    <div class="card-description"></div>
-                </div>
-            </div>
-
-            <div class="card">
-                <div class="card-content card-text">
-                    <div class="top-card-text">
-                        <div class="text-item-top"></div>
-                        <div class="text-item card-name">Labial y rubor</div>
-                        <div class="text-item card-name">en barra</div>
-                        <div class="text-item card-volume">3 opciones</div>
-                    </div>
-                    <div class="bottom-card-text">
-                        <div>8 cuc</div>
-                    </div>
-                </div>
-
-                <div class="card-content card-image card-image-07">
-                    <div class="card-description"></div>
-                </div>
-            </div>
-
-            <div class="card">
-                <div class="card-content card-text">
-                    <div class="top-card-text">
-                        <div class="text-item-top"></div>
-                        <div class="text-item card-name">Trio</div>
-                        <div class="text-item card-name">de sombras</div>
-                        <div class="text-item card-volume">7 opciones</div>
-                    </div>
-                    <div class="bottom-card-text">
-                        <div>10 cuc</div>
-                    </div>
-                </div>
-
-                <div class="card-content card-image card-image-08">
-                    <div class="card-description"></div>
-                </div>
-            </div>
-
-            <div class="card">
-                <div class="card-content card-text">
-                    <div class="top-card-text">
-                        <div class="text-item-top"></div>
-                        <div class="text-item card-name">Set</div>
-                        <div class="text-item card-name">de verano</div>
-                        <div class="text-item card-volume">promoci&oacute;n</div>
-                    </div>
-                    <div class="bottom-card-text">
-                        <div>30 cuc</div>
-                    </div>
-                </div>
-
-                <div class="card-content card-image card-image-09">
-                    <div class="card-description"></div>
-                </div>
-            </div>
-
-            <div class="card">
-                <div class="card-content card-text">
-                    <div class="top-card-text">
-                        <div class="text-item-top"></div>
-                        <div class="text-item card-name">Sombras</div>
-                        <div class="text-item card-name">para ojos</div>
-                        <div class="text-item card-volume">21 opciones</div>
-                    </div>
-                    <div class="bottom-card-text">
-                        <div>5 cuc</div>
-                    </div>
-                </div>
-
-                <div class="card-content card-image card-image-10">
-                    <div class="card-description"></div>
-                </div>
-            </div>
-
-            <div class="card">
-                <div class="card-content card-text">
-                    <div class="top-card-text">
-                        <div class="text-item-top"></div>
-                        <div class="text-item card-name">Looks</div>
-                        <div class="text-item card-name">de Luis Casco</div>
-                        <div class="text-item card-volume">4 opciones</div>
-                    </div>
-                    <div class="bottom-card-text">
-                        <div>25 cuc</div>
-                    </div>
-                </div>
-
-                <div class="card-content card-image card-image-11">
-                    <div class="card-description"></div>
-                </div>
-            </div>
-
-            <div class="card">
-                <div class="card-content card-text">
-                    <div class="top-card-text">
-                        <div class="text-item-top"></div>
-                        <div class="text-item card-name">Labial</div>
-                        <div class="text-item card-name">mate</div>
-                        <div class="text-item card-volume">4 opciones</div>
-                    </div>
-                    <div class="bottom-card-text">
-                        <div>13 cuc</div>
-                    </div>
-                </div>
-
-                <div class="card-content card-image card-image-12">
-                    <div class="card-description"></div>
-                </div>
-            </div>
-
-            <div class="card">
-                <div class="card-content card-text">
-                    <div class="top-card-text">
-                        <div class="text-item-top"></div>
-                        <div class="text-item card-name">Labial semi-mate</div>
-                        <div class="text-item card-name">o semi-shane</div>
-                        <div class="text-item card-volume">21 opciones</div>
-                    </div>
-                    <div class="bottom-card-text">
-                        <div>12 cuc</div>
-                    </div>
-                </div>
-
-                <div class="card-content card-image card-image-13">
-                    <div class="card-description"></div>
-                </div>
-            </div>
-
-            <div class="card">
-                <div class="card-content card-text">
-                    <div class="top-card-text">
-                        <div class="text-item-top"></div>
-                        <div class="text-item card-name">L&aacute;piz delineador</div>
-                        <div class="text-item card-name">para labios</div>
-                        <div class="text-item card-volume">5 opciones</div>
-                    </div>
-                    <div class="bottom-card-text">
-                        <div>10 cuc</div>
-                    </div>
-                </div>
-
-                <div class="card-content card-image card-image-14">
-                    <div class="card-description"></div>
-                </div>
-            </div>
-
-            <div class="card">
-                <div class="card-content card-text">
-                    <div class="top-card-text">
-                        <div class="text-item-top"></div>
-                        <div class="text-item card-name">Brillo labial</div>
-                        <div class="text-item card-name">acabado Glossy</div>
-                        <div class="text-item card-volume">11 opciones</div>
-                    </div>
-                    <div class="bottom-card-text">
-                        <div>12 cuc</div>
-                    </div>
-                </div>
-
-                <div class="card-content card-image card-image-15">
-                    <div class="card-description"></div>
-                </div>
-            </div>
-
-            <div class="card">
-                <div class="card-content card-text">
-                    <div class="top-card-text">
-                        <div class="text-item-top"></div>
-                        <div class="text-item card-name">Set de brochas</div>
-                        <div class="text-item card-name">con estuche</div>
-                        <div class="text-item card-volume">5 brochas y 1 estuche</div>
-                    </div>
-                    <div class="bottom-card-text">
-                        <div>56 cuc</div>
-                    </div>
-                </div>
-
-                <div class="card-content card-image card-image-17">
-                    <div class="card-description"></div>
-                </div>
-            </div>
-
-			<div class="footer"></div>
-		</div>
-
-	</body>
-
-    <script>
-
-        let cards = document.getElementsByClassName("card");
-        for (let i = 0; i < cards.length; i++) {
-            let card = cards[i];
-            card.onclick = function(){ expandOrReduce(this) };
-        }
-
-        function expandOrReduce(card) {
-
-            let card_text = card.getElementsByClassName("card-text")[0];
-            let card_image = card.getElementsByClassName("card-image")[0];
-            let card_description = card.getElementsByClassName("card-description")[0];
-
-            let isCardFullScreen = card_text.style.display === 'none';
-
-            card.style.height = isCardFullScreen ? '25%' : '84%';
-            card_text.style.display = isCardFullScreen ? 'block' : 'none';
-            card_image.style.width = isCardFullScreen ? '50%' : '100%';
-            card_description.style.display = isCardFullScreen ? 'none' : 'block';
-        }
-
-    </script>
+<script>
+    $(document).ready( function() {
+        $('#sample-1').on('click', function () {
+            writeMainActivityData_V1();
+        });
+        $('#sample-2').on('click', function () {
+            writeMainActivityData_V2();
+        });
+    });
+</script>
+</body>
 </html>
